@@ -17,11 +17,12 @@ import SecondaryButton from '../atoms/SecondaryButton';
 import TextInput from '../atoms/TextInput';
 
 import { PollContext } from './PollCOntext';
+import PrimaryButton from '../atoms/PrimaryButton';
 
 const HostControlView = () => {
   const {sendControlMessage} = useContext(chatContext);
   const {primaryColor} = useContext(ColorContext);
-  const {question, setQuestion, answers, setAnswers} = useContext(PollContext);
+  const {question, setQuestion, answers, setAnswers, isModalOpen, setIsModalOpen} = useContext(PollContext);
   return (
     <>
       <Text style={style.heading}>Host Controls</Text>
@@ -45,7 +46,7 @@ const HostControlView = () => {
             onChangeText={setQuestion}
             placeholder="Poll Questions" />
             <br/>
-            {answers.map((answer:any, i:any) => {
+            {answers.map((answer, i) => {
               <div key={i}>
                 <br />
                 <TextInput 
@@ -57,7 +58,12 @@ const HostControlView = () => {
             })}
         </View>
         <View style={style.btnContainer}>
-            
+            <PrimaryButton
+              text='Start Poll'
+              onPress={() => {
+                setIsModalOpen(true);
+              }}/>
+              
         </View>
       </View>
     </>
