@@ -59,7 +59,6 @@ const Join = (props: joinProps) => {
   return (
     <ScrollView contentContainerStyle={style.main}>
       <View style={style.nav}>
-        {hasBrandLogo && <Logo />}
         {error ? <Error error={error} /> : <></>}
       </View>
       <View style={style.content}>

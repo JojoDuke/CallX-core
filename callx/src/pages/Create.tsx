@@ -140,7 +140,7 @@ const Create = () => {
         <View style={style.content} onLayout={onLayout}>
           <View style={style.leftContent}>
             <Text style={style.heading}>Simple, fast and reliable conferencing</Text>
-            <Text style={style.headline}>Callx provides a simple video conferencing, live chat and instant <br/> recording platform for all your meetings and events</Text>
+            <Text style={style.headline}>CallX provides a simple video conferencing, live chat and instant <br/> recording platform for all your meetings and events</Text>
             <View style={style.inputs}>
               <TextInput
                 value={roomTitle}
@@ -203,7 +203,7 @@ const Create = () => {
         />
       )}
       <View style={style.footerDiv}>
-        <Text>Copyright © Callx 2022</Text>
+        <Text>Copyright © CallX 2022</Text>
       </View>
     </ScrollView>
   );
