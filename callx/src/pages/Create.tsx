@@ -35,7 +35,7 @@ import Error from '../subComponents/Error';
 import Toast from '../../react-native-toast-message';
 import hasBrandLogo from '../utils/hasBrandLogo';
 import LandingNavbar from '../components/LandingNavbar';
-import LandingFooter from '../components/LandingFooter';
+import { FaWeight } from 'react-icons/fa';
 
 type PasswordInput = {
   host: string;
@@ -139,8 +139,8 @@ const Create = () => {
       {!roomCreated ? (
         <View style={style.content} onLayout={onLayout}>
           <View style={style.leftContent}>
-            <Text style={style.heading}>{$config.APP_NAME}</Text>
-            <Text style={style.headline}>Null</Text>
+            <Text style={style.heading}>Simple, fast and reliable conferencing</Text>
+            <Text style={style.headline}>Callx provides a simple video conferencing, live chat and instant <br/> recording platform for all your meetings and events</Text>
             <View style={style.inputs}>
               <TextInput
                 value={roomTitle}
@@ -202,7 +202,9 @@ const Create = () => {
           roomTitle={roomTitle}
         />
       )}
-      <LandingFooter/>
+      <View style={style.footerDiv}>
+        <Text>Copyright © Callx 2022</Text>
+      </View>
     </ScrollView>
   );
 };
@@ -210,6 +212,17 @@ const Create = () => {
 const style = StyleSheet.create({
   main: {
     
+  },
+  footerDiv: {
+    backgroundColor: 'white',
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '20px',
+    fontWeight: '700',
+    padding: '20px',
+    height: '16px',
   },
   nav: {
     flex: 1,
