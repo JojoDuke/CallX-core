@@ -46,7 +46,7 @@ const HostControlView = () => {
             onChangeText={setQuestion}
             placeholder="Poll Questions" />
             <br/>
-            {answers.map((answer, i) => {
+            {answers.map((answer:any, i:any) => {
               <div key={i}>
                 <br />
                 <TextInput 

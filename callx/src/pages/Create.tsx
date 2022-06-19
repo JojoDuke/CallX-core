@@ -34,6 +34,8 @@ import TextInput from '../atoms/TextInput';
 import Error from '../subComponents/Error';
 import Toast from '../../react-native-toast-message';
 import hasBrandLogo from '../utils/hasBrandLogo';
+import LandingNavbar from '../components/LandingNavbar';
+import LandingFooter from '../components/LandingFooter';
 
 type PasswordInput = {
   host: string;
@@ -129,8 +131,8 @@ const Create = () => {
     //   resizeMode={'cover'}>
     // <KeyboardAvoidingView behavior={'height'} style={style.main}>
     <ScrollView contentContainerStyle={style.main}>
+      <LandingNavbar/>
       <View style={style.nav}>
-        {hasBrandLogo && <Logo />}
         {error ? <Error error={error} /> : <></>}
         {/* <OpenInNativeButton /> */}
       </View>
@@ -138,7 +140,7 @@ const Create = () => {
         <View style={style.content} onLayout={onLayout}>
           <View style={style.leftContent}>
             <Text style={style.heading}>{$config.APP_NAME}</Text>
-            <Text style={style.headline}>{$config.LANDING_SUB_HEADING}</Text>
+            <Text style={style.headline}>Null</Text>
             <View style={style.inputs}>
               <TextInput
                 value={roomTitle}
@@ -200,17 +202,14 @@ const Create = () => {
           roomTitle={roomTitle}
         />
       )}
+      <LandingFooter/>
     </ScrollView>
   );
 };
 
 const style = StyleSheet.create({
   main: {
-    paddingVertical: '8%',
-    marginHorizontal: '8%',
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    flexGrow: 1,
+    
   },
   nav: {
     flex: 1,

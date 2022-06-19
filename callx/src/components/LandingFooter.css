@@ -1,0 +1,25 @@
+.footerDiv{
+    background-color: rgb(23, 23, 23);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.logoDiv{
+    display: flex;
+    align-items: center;
+}
+
+.socialsIcon{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(95, 95, 95);
+    margin: 0px 10px;
+    cursor: pointer;
+}.socialsIcon:hover{
+    opacity: 0.7;
+}
