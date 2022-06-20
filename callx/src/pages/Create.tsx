@@ -191,6 +191,7 @@ const Create = () => {
               />
             </View>
           </View>
+          
         </View>
       ) : (
         <Share
@@ -203,8 +204,8 @@ const Create = () => {
         />
       )}
       <View style={style.footerDiv}>
-        <Text>Copyright © CallX 2022</Text>
-      </View>
+            <Text>Copyright © CallX 2022</Text>
+          </View>
     </ScrollView>
   );
 };
@@ -222,7 +223,6 @@ const style = StyleSheet.create({
     fontSize: '20px',
     fontWeight: '700',
     padding: '20px',
-    height: '16px',
   },
   nav: {
     flex: 1,

@@ -21,8 +21,7 @@ const LandingNavbar = () => {
                 </NavLink>
                 <Bars />
                 <NavBtn>
-                    <NavBtnLink2 to='/login'>Login</NavBtnLink2>
-                    <NavBtnLink to='/register'>Get Started</NavBtnLink>
+                    <NavBtnLink to={{ pathname: "https://flutterwave.com/pay/jfkvbp6hvewf" }} target="_blank">Toss a coin...</NavBtnLink>
                 </NavBtn>
             </Nav>
         </>

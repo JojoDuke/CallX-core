@@ -15,14 +15,11 @@ import chatContext, {controlMessageEnum} from './ChatContext';
 import ColorContext from './ColorContext';
 import SecondaryButton from '../atoms/SecondaryButton';
 import TextInput from '../atoms/TextInput';
-
-import { PollContext } from './PollCOntext';
 import PrimaryButton from '../atoms/PrimaryButton';
 
 const HostControlView = () => {
   const {sendControlMessage} = useContext(chatContext);
   const {primaryColor} = useContext(ColorContext);
-  const {question, setQuestion, answers, setAnswers, isModalOpen, setIsModalOpen} = useContext(PollContext);
   return (
     <>
       <Text style={style.heading}>Host Controls</Text>
@@ -38,32 +35,6 @@ const HostControlView = () => {
             onPress={() => sendControlMessage(controlMessageEnum.muteVideo)}
             text={'Mute all videos'}
           />
-        </View>
-        <Text style={style.heading}>Create a poll</Text>
-        <View style={{ margin: '20px', }}>
-          <TextInput 
-            value={question}
-            onChangeText={setQuestion}
-            placeholder="Poll Questions" />
-            <br/>
-            {answers.map((answer:any, i:any) => {
-              <div key={i}>
-                <br />
-                <TextInput 
-                  value={answer.option}
-                  placeholder={`Poll Answer ${i + 1}`}
-                  onChangeText={(value) => setAnswers([ ...answers.slice(0, i), {option: value, votes: 0,}, ...answers.slice(i + 1) ])}
-                  />
-              </div>
-            })}
-        </View>
-        <View style={style.btnContainer}>
-            <PrimaryButton
-              text='Start Poll'
-              onPress={() => {
-                setIsModalOpen(true);
-              }}/>
-              
         </View>
       </View>
     </>
