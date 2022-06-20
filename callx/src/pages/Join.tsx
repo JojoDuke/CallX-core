@@ -59,6 +59,7 @@ const Join = (props: joinProps) => {
   return (
     <ScrollView contentContainerStyle={style.main}>
       <View style={style.nav}>
+      <Text style={style.heading}>{$config.APP_NAME}</Text>
         {error ? <Error error={error} /> : <></>}
       </View>
       <View style={style.content}>
