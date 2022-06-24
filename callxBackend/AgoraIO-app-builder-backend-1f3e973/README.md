@@ -38,4 +38,4 @@ To get started with this project. Refer to the docs here: https://appbuilder.ago
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [PostgreSQL](https://www.postgresql.org/) - Database
 - [GraphQL](https://graphql.org/) - Query Language
-- [GoLang](https://golang.org/) - Server Environment
+- [GoLang](https://golang.org/) - Server Environments
