@@ -94,7 +94,7 @@ const Precall = (props: any) => {
     <View style={style.nav}>
       <img 
         src={logos}
-        width='30px'/>
+        width='90px'/>
       {error && <Error error={error} showBack={true} />}
     </View>
   );
