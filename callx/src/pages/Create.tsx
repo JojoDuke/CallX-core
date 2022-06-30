@@ -24,6 +24,7 @@ import Error from '../subComponents/Error';
 import Toast from '../../react-native-toast-message';
 import hasBrandLogo from '../utils/hasBrandLogo';
 import LandingNavbar from '../components/LandingNavbar';
+import ReactGA from 'react-ga';
 import { FaWeight } from 'react-icons/fa';
 
 type PasswordInput = {
@@ -70,6 +71,14 @@ const Create = () => {
   const [createChannel, {data, loading, error}] = useMutation(CREATE_CHANNEL);
 
   console.log('mutation data', data);
+
+  const TRACKING_ID = "G-0Y7FB4Z3LE"; //
+  ReactGA.initialize(TRACKING_ID);
+
+  ReactGA.event({
+    category: 'User',
+    action: 'Page visit'
+  });
 
   useEffect(() => {
     if (Platform.OS === 'web') {
