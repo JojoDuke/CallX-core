@@ -1,6 +1,7 @@
 import React, {useState, useContext, useEffect} from 'react';
 import {View, Text, StyleSheet, Dimensions, Platform} from 'react-native';
 import TextInput from '../atoms/TextInput';
+import logos from '../assets/callXlogonew.jpg'
 import PrimaryButton from '../atoms/PrimaryButton';
 import {
   MaxUidConsumer,
@@ -91,7 +92,9 @@ const Precall = (props: any) => {
 
   const brandHolder = () => (
     <View style={style.nav}>
-      {hasBrandLogo && <Logo />}
+      <img 
+        src={logos}
+        width='30px'/>
       {error && <Error error={error} showBack={true} />}
     </View>
   );
